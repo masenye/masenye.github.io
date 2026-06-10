@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katleho Masenye | Software Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #00d4ff;
+        }
+
+        nav {
+            background: #0f3460;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-weight: bold;
+            color: #0f3460;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background: #0f3460;
+            color: white;
+            padding: 1rem;
+        }
+
+        .project-header h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            color: #00d4ff;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body ul {
+            padding-left: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .project-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Resume Button */
+        .resume-btn {
+            display: inline-block;
+            background: #0f3460;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #00d4ff;
+            color: #1a1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            .profile-name {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1 class="profile-name">Katleho Masenye</h1>
+        <p class="profile-title">Computing in Software Engineering Student | Botho University</p>
+        <div class="contact-info">
+            <span>📍 Maseru, Lesotho</span>
+            <span>📞 59984260</span>
+            <span>📧 katleho.masenye@bothouniversity.com</span>
+            <a href="https://github.com/YOUR_USERNAME" target="_blank">🐙 GitHub</a>
+            <a href="https://www.linkedin.com/in/katleho-masenye-b7baa9404" target="_blank">🔗 LinkedIn</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>I'm a motivated third-year <strong>Computing in Software Engineering</strong> student at Botho University, graduating July 2028. I have a strong foundation in <strong>Java, C#, JavaScript, and SQL</strong> with hands-on experience in full-stack development, database management, and Agile methodologies.</p>
+            <p>I'm seeking an internship where I can apply my technical skills to solve real-world problems and continue learning from experienced engineers.</p>
+            <a href="#" class="resume-btn" id="downloadResume">📄 Download Resume (PDF)</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-card">Java / Advanced Java</span>
+            <span class="skill-card">C# / .NET</span>
+            <span class="skill-card">JavaScript</span>
+            <span class="skill-card">SQL</span>
+            <span class="skill-card">HTML5 & CSS3</span>
+            <span class="skill-card">JSP & Servlets</span>
+            <span class="skill-card">MySQL / XAMPP</span>
+            <span class="skill-card">Oracle</span>
+            <span class="skill-card">Git & GitHub</span>
+            <span class="skill-card">Agile / Scrum</span>
+            <span class="skill-card">OOP Principles</span>
+            <span class="skill-card">Apache Tomcat</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1: BothoClinicManagement -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🏥 BothoClinicManagement</h3>
+                    <p class="project-tech">C# | MySQL | Desktop Application</p>
+                </div>
+                <div class="project-body">
+                    <p>QR-code-based attendance system for students and courses.</p>
+                    <ul>
+                        <li>Reduced manual roll-call time by approximately 30%</li>
+                        <li>Secure login with role-based access</li>
+                        <li>Real-time QR code generation and scanning</li>
+                        <li>Collaborated with 2 classmates using Git/GitHub</li>
+                    </ul>
+                    <p><strong>Duration:</strong> October 2025 – Present</p>
+                </div>
+            </div>
+
+            <!-- Project 2: SmartCropIrrigation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🌾 SmartCropIrrigation</h3>
+                    <p class="project-tech">Advanced Java (JSP, Servlets) | MySQL (XAMPP) | OOP</p>
+                </div>
+                <div class="project-body">
+                    <p>Smart irrigation recommendation system analyzing crop types, soil conditions, and weather patterns.</p>
+                    <ul>
+                        <li>Applied inheritance, polymorphism, and encapsulation</li>
+                        <li>User login, crop management, and irrigation logging</li>
+                        <li>Deployed on Apache Tomcat with XAMPP database</li>
+                    </ul>
+                    <p><strong>Completed:</strong> February 2026</p>
+                </div>
+            </div>
+
+            <!-- Project 3: PABALA_ERP -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>💄 PABALA_ERP</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript | MySQL (XAMPP)</p>
+                </div>
+                <div class="project-body">
+                    <p>Complete ERP system for a cosmetics company.</p>
+                    <ul>
+                        <li>Sales Management – orders, invoices, revenue</li>
+                        <li>Customer & Supplier Management</li>
+                        <li>Reports Dashboard</li>
+                        <li>Credits & Payments tracking</li>
+                    </ul>
+                    <p><strong>Completed:</strong> April 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="about-content">
+            <p>📧 <strong>Email:</strong> katleho.masenye@bothouniversity.com</p>
+            <p>📞 <strong>Phone:</strong> 59984260</p>
+            <p>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/katleho-masenye-b7baa9404" target="_blank">linkedin.com/in/katleho-masenye</a></p>
+            <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/YOUR_USERNAME</a></p>
+            <p style="margin-top: 1rem;">References available upon request.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Katleho Masenye. All rights reserved.</p>
+    <p>Built with HTML, CSS, and JavaScript</p>
+</footer>
+
+<script>
+    // Simple script for resume download (you'll need to add your actual PDF file)
+    document.getElementById('downloadResume').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Please save your resume as "Katleho_Masenye_Resume.pdf" and upload to the same folder as this website.\n\nThen update the link in the HTML to point to your PDF file.');
+    });
+</script>
+
+</body>
+</html>
